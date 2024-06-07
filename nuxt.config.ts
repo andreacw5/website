@@ -1,30 +1,70 @@
+import { createResolver } from '@nuxt/kit'
+const { resolve } = createResolver(import.meta.url)
+import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+
+// https://github.com/viandwi24/nuxt3-awesome-starter/blob/v2/nuxt.config.ts
+
 export default defineNuxtConfig({
   app: {
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
-      title: "Nuxt Example",
-      titleTemplate: "%s | nuxt3-vuetify",
+      title: "Home",
+      titleTemplate: "%s | Andrea Tombolato",
     },
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' },
   },
-  modules: ['@nuxtjs/sitemap', "@nuxtjs/i18n"],
-  css: ["vuetify/lib/styles/main.sass", '@mdi/font/css/materialdesignicons.css'],
+  modules: [
+    (_options, nuxt) => {
+      nuxt.hooks.hook('vite:extendConfig', (config) => {
+        // @ts-expect-error
+        config.plugins.push(vuetify({ autoImport: true }))
+      })
+    },
+   '@nuxt/fonts',
+   '@nuxtjs/sitemap',
+   '@nuxtjs/i18n'
+  ],
+  css: [
+     resolve('./assets/scss/global.scss'),
+    'vuetify/lib/styles/main.sass',
+    resolve('./assets/scss/variables.scss'),
+    '@mdi/font/css/materialdesignicons.css'
+  ],
   build: {
-    transpile: ["vuetify"],
+    transpile: ['vuetify'],
   },
   i18n: {
     /* module options */
     lazy: true,
     langDir: "locales",
-    strategy: "prefix_except_default",
+    strategy: 'no_prefix',
     locales: [
       {
         code: "en-US",
         iso: "en-US",
-        name: "English(US)",
+        icon: 'gb',
+        name: "English",
         file: "en-US.json",
+      },{
+        code: "it-IT",
+        iso: "it-IT",
+        icon: 'it',
+        name: "Italiano",
+        file: "it-IT.json",
       },
     ],
-    defaultLocale: "en-US",
+    detectBrowserLanguage: {
+      useCookie: false
+    },
+    defaultLocale: "it-IT",
+  },
+  vite: {
+    vue: {
+      template: {
+        transformAssetUrls,
+      },
+    },
   },
 })

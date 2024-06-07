@@ -1,0 +1,8 @@
+{
+  "app_title": "Nuxt3 Vuetify Example",
+  "sections": {
+    "home": "Su di me",
+    "projects": "Portfolio",
+    "travels": "Viaggi"
+  }
+}

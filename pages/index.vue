@@ -11,12 +11,11 @@ const show = ref(false)
 </script>
 
 <template>
-  <v-layout>
-    <v-main>
-      <v-container fluid>
+   <v-container grid-list-md text-xs-center>
+      <v-container grid-list-sm text-xs-center class="mt-10">
         <v-row dense>
           <v-col v-for="n in 12" :key="n" cols="12" sm="6" md="4" lg="3">
-            <v-card variant="elevated" color="#424242">
+            <v-card variant="elevated">
               <v-img
                   height="200px"
                   src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
@@ -62,8 +61,7 @@ const show = ref(false)
           </v-col>
         </v-row>
       </v-container>
-    </v-main>
-  </v-layout>
+   </v-container>
 </template>
 
 <style scoped>

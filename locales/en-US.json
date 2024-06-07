@@ -1,3 +1,8 @@
 {
-  "app_title": "Nuxt3 Vuetify Example"
+  "app_title": "Nuxt3 Vuetify Example",
+  "sections": {
+    "home": "Home",
+    "projects": "Projects",
+    "travels": "Travels"
+  }
 }

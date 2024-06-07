@@ -1,0 +1,188 @@
+:root {
+  --color: #fafafa;
+  --color-secondary: #9c9d9e;
+  --color-primary: #00A86B;
+  --bg: #121212FF;
+  --bg-secondary: #383838;
+  --border-color: #383838FF;
+  --card-color: #1E1E1FFF;
+  --card-text: #fafafa;
+  --circle-color: rgba(135, 135, 135, 0.15);
+  --bg-gradient-dark: linear-gradient(to bottom right,rgba(45,45,46,.251),rgba(27,27,29,0)),#202022;
+  --bg-trs: #1f2123;
+  --shadow: #00000040;
+  --bg-ending: #1f1f1f;
+}
+
+.white-mode {
+  --color: #1f2123;
+  --color-primary: #00A86B;
+  --color-secondary: #0e2233;
+  --bg: #dadcdb;
+  --bg-secondary: #fff;
+  --border-color: #ddd;
+  --card-color: #717171;
+  --card-text: #e0e0e0;
+  --bg-trs: #fcfcfc;
+  --bg-ending: #bdbdbd;
+  --shadow: #00000040;
+  --bg-gradient-dark: linear-gradient(to bottom right,rgba(45,45,46,.251),rgba(27,27,29,0)),#202022;
+  --circle-color: rgba(14, 14, 14, 0.64)
+}
+
+:root {
+  font-family: 'Rubik', sans-serif;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: var(--color-primary);
+}
+
+::selection {
+  color: black;
+  background: var(--color-primary);
+}
+
+a {
+  color: var(--color) !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--color-primary) !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  background-color: var(--bg);
+  color: var(--color);
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-header {
+  color: var(--card-text);
+  background: #282829 !important;
+  border-bottom: solid 1px var(--color-primary) !important;
+  border-radius: 14px !important;
+}
+
+.atom-card:hover {
+  border-bottom: solid 2px var(--color-primary) !important;
+  border-right: solid 2px var(--color-primary) !important;
+}
+
+.travels-col {
+  text-align: center;
+  color: var(--card-text);
+  font-weight: 600;
+}
+
+.round-border {
+  border-radius: 14px !important;
+}
+
+.card {
+  color: var(--card-text);
+  background: var(--card-color) !important;
+  border: solid 1px var(--border-color) !important;
+  transition: background-color .5s;
+  border-radius: 14px !important;
+}
+
+.common-card:hover {
+  transform: translateY(-2px);
+}
+
+.button-hover:hover > span {
+  color: var(--color-primary) !important;
+  transition: all 0.25s;
+  transform: scale(1.1);
+}
+
+.button-hover.v-btn--active > span {
+  color: var(--color-primary) !important;
+  font-weight: bold;
+}
+
+.card-gradient {
+  color: var(--card-text);
+  background: var(--bg-gradient-dark) !important;
+  border: solid 1px var(--border-color) !important;
+  box-shadow: 0 16px 30px var(--shadow) !important;
+  transition: background-color .5s;
+  border-radius: 14px !important;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: solid 1px var(--border-color);
+}
+
+.v-list {
+  border-radius: 10px !important;
+}
+
+.card-text {
+  color: var(--card-text) !important;
+}
+
+.primary-text {
+  color: var(--color-primary) !important;
+}
+
+.white-text {
+  color: var(--color) !important;
+}
+
+.secondary-color {
+  color: var(--color-secondary) !important;
+}
+
+.secondary-border {
+  border: solid 1px var(--border-color) !important;
+}
+
+.home-enter-active, .home-leave-active { transition: opacity .10s; }
+.home-enter, .home-leave-active { opacity: 0; }
+
+/* Animation effect */
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.3em 0.3em -0.2em var(--color-primary);
+  transform: translateY(-0.10em);
+}
+
+.up:hover,
+.up:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--color-primary);
+}
+
+.transition-h:hover {
+  transform: scale(1.1);
+}
+
+.image-transition {
+  transition: .25s ease;
+}
+
+.project-card {
+  border-radius: 14px !important;
+  background: transparent;
+}
+
+.modal-title {
+  color: var(--card-text);
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
