@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
       title: "Home",
-      titleTemplate: "%s | Andrea Tombolato",
+      titleTemplate: "%s | Andrea Tombolato"
     },
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' },
@@ -22,9 +22,10 @@ export default defineNuxtConfig({
         config.plugins.push(vuetify({ autoImport: true }))
       })
     },
-   '@nuxt/fonts',
-   '@nuxtjs/sitemap',
-   '@nuxtjs/i18n'
+    '@pinia/nuxt',
+    '@nuxt/fonts',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/i18n'
   ],
   css: [
      resolve('./assets/scss/global.scss'),

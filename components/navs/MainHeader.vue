@@ -3,7 +3,7 @@ const drawer = ref(false);
 
 const links = [
    { title: 'Home', value: '/' },
-   { title: 'Portfolio', value: '/portfolio' },
+   { title: 'Portfolio', value: '/projects' },
    { title: 'Travels', value: '/travels' },
 ];
 
@@ -42,7 +42,7 @@ const availableLocales = computed(() => {
                <v-btn variant="text" to="/" nuxt class="hidden-sm-and-down white-text mr-1">
                   {{ $t('sections.home') }}
                </v-btn>
-               <v-btn variant="text" to="/portfolio" nuxt class="hidden-sm-and-down white-text mr-1">
+               <v-btn variant="text" to="/projects" nuxt class="hidden-sm-and-down white-text mr-1">
                   {{ $t('sections.projects') }}
                </v-btn>
                <v-btn variant="text" to="/travels" nuxt class="hidden-sm-and-down white-text mr-1">
